@@ -5,6 +5,7 @@
 # Date: 28 Feb 2016
 
 import sys
+import time
 from acitoolkit.acitoolkit import *
 from vmware import DVS
 
@@ -17,8 +18,8 @@ def main():
     """
 
     # Detach Universe-App from ACI DVS port-groups.
-#    devnet_vc_dvs_aci()
     DVS.dvs_quarantine()
+    time.sleep(5)
 
     # Take login credentials from the command line if provided
     # Otherwise, take them from your environment variables file ~/.profile

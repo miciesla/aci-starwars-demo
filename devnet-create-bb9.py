@@ -1,8 +1,11 @@
 # Auther: Michael Ciesla <miciesla@cisco.com>
 # Date: 3 Mar 2016
 
+import time
 from acitoolkit.acitoolkit import *
 from Queue import Queue
+from vmware import DVS
+
 
 # Create the Tenant
 tenant = Tenant('BB-9')
@@ -107,3 +110,8 @@ if resp.ok:
 print 'Pushed the following JSON to the APIC'
 print 'URL:', tenant.get_url()
 print 'JSON:', tenant.get_json()
+
+# Migrate Universe-App VM NICs to ACI DVS port-profiles in vSphere.
+# Also connect the VM NICs.
+time.sleep(5)
+DVS.dvs_aci()
