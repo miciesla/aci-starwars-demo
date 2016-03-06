@@ -39,7 +39,7 @@ def main():
                 'The-Emperor','Darth-Maul','Chewbacca','Padma-Amidala','C-3PO',
                 'Jar-Jar-Binks','Jabba-the-Hutt','Obi-Wan-Kenobi','Captain-Phasma',
                 'Clone-Trooper','Lando-Calrissian','Count-Dooku','Finn','Sabe',
-                'Jango-Fett','Qui-Gon-Jinn','Mace-Windu','Shmi-Skywalker','BB-9']
+                'Jango-Fett','Qui-Gon-Jinn','Mace-Windu','Shmi-Skywalker','BB-9','BB10']
 
     # Download all of the tenants
     print("TENANT")
