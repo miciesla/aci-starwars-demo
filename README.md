@@ -3,8 +3,7 @@ ACI programmability demo for Cisco Live 2016 Melbourne, Devnet. The force is str
 
 # Environment
 
-* Download & install [VirtualBox](https://www.virtualbox.org/)
-* Download & install [Vagrant](https://www.vagrantup.com/downloads.html)
+* Download & install [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/downloads.html)
 
 # Installation
 ```
@@ -15,7 +14,7 @@ ACI programmability demo for Cisco Live 2016 Melbourne, Devnet. The force is str
 # Usage
 ```
   vagrant ssh
-  cd /vagrantup
+  cd /vagrant
 ```
 Create the BB-9 tenant:
 ```
