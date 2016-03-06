@@ -6,6 +6,7 @@
 
 import sys
 from acitoolkit.acitoolkit import *
+from vmware import DVS
 
 
 def main():
@@ -14,6 +15,11 @@ def main():
 
     :return: None
     """
+
+    # Detach Universe-App from ACI DVS port-groups.
+#    devnet_vc_dvs_aci()
+    DVS.dvs_quarantine()
+
     # Take login credentials from the command line if provided
     # Otherwise, take them from your environment variables file ~/.profile
     description = 'Simple application that logs on to the APIC and displays all of the Tenants.'

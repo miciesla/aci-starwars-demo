@@ -32,8 +32,8 @@ def get_obj(content, vimtype, name):
     return obj
 
 
-
-def main():
+def devnet_vc_dvs_quarantine():
+#def main():
     HOST = '10.67.16.198'
     USER = 'root'
     PASSWORD = '@dm1nC1sc1'
@@ -112,5 +112,5 @@ def main():
     return 0
 
 # Start program
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+#    main()
