@@ -16,18 +16,18 @@ ACI programmability demo for Cisco Live 2016 Melbourne, Devnet. The force is str
   vagrant ssh
   cd /vagrant
 ```
-Create the BB-9 tenant:
+* Create the BB-9 tenant:
 ```
   python devnet-create-bb9.py
 ```
-  Web browse to the load balancer address. Hit refresh to change the Millennium Falcon's charter.
+* Web browse to the load balancer address. Hit refresh to change the Millennium Falcon's charter.
 
-Create ACI tenancies for the other Star Wars characters
+* Create ACI tenancies for the other Star Wars characters
 ```
   python devnet-loop.py
 ```
 
-Remove all tenancies:
+* Remove all tenancies:
 ```
   python devnet-loop.py
 ```
