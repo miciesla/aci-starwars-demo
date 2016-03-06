@@ -29,5 +29,5 @@ ACI programmability demo for Cisco Live 2016 Melbourne, Devnet. The force is str
 
 * Remove all tenancies:
 ```
-  python devnet-loop.py
+  python devnet-delete.py
 ```
