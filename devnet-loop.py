@@ -7,7 +7,7 @@ from Queue import Queue
 
 starwars_characters = ['Darth-Vader','Luke-Skywalker','Yoda','Boba-Fett',
                         'Supreme-Leader-Snoke','Han-Solo','Princess-Leia','R2-D2','Rey',
-                        'The-Emperor','Darth-Maul','Chewbacca','Padma-Amidala','C-3PO',
+                        'The-Emperor','Darth-Maul','Padma-Amidala','C-3PO',
                         'Jar-Jar-Binks','Jabba-the-Hutt','Obi-Wan-Kenobi','Captain-Phasma',
                         'Clone-Trooper','Lando-Calrissian','Count-Dooku','Finn','Sabe',
                         'Jango-Fett','Qui-Gon-Jinn','Mace-Windu','Shmi-Skywalker']
