@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-
 # Auther: Michael Ciesla <miciesla@cisco.com>
 # Date: 28 Feb 2016
 
