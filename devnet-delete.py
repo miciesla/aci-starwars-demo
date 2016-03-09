@@ -5,6 +5,7 @@
 
 import sys
 import time
+import requests
 from acitoolkit.acitoolkit import *
 from vmware import DVS
 
@@ -57,6 +58,8 @@ def main():
                 print 'Pushed the following JSON to the APIC'
                 print 'URL:', tenant.get_url()
                 print 'JSON:', tenant.get_json()
+                spark_post = requests.post('https://api.ciscospark.com/v1/webhooks/incoming/Y2lzY29zcGFyazovL3VzL1dFQkhPT0svYTg5N2QxMDEtMWQ5ZC00ZTA0LThkYzEtNzQwOTdmMmYyZDhm', data = {'text': star+' has joined the Dark Side and left the ACI fabric..'})
+
 
 if __name__ == '__main__':
     main()
