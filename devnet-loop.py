@@ -5,6 +5,8 @@
 
 from acitoolkit.acitoolkit import *
 from Queue import Queue
+import requests
+
 
 starwars_characters = ['Darth-Vader','Luke-Skywalker','Yoda','Boba-Fett',
                         'Supreme-Leader-Snoke','Han-Solo','Princess-Leia','R2-D2','Rey',
@@ -21,6 +23,9 @@ args = creds.get()
 # Login to APIC and push the config
 session = Session(args.url, args.login, args.password)
 session.login()
+
+# Init for validation
+starwars_validation = 0
 
 for hero in starwars_characters:
     # Create the Tenant
@@ -95,6 +100,13 @@ for hero in starwars_characters:
     resp = tenant.push_to_apic(session)
     if resp.ok:
         print 'Success'
+        spark_post = requests.post('https://api.ciscospark.com/v1/webhooks/incoming/Y2lzY29zcGFyazovL3VzL1dFQkhPT0svYTg5N2QxMDEtMWQ5ZC00ZTA0LThkYzEtNzQwOTdmMmYyZDhm', data = {'text': hero+' has joined the ACI fabric!'})
+        starwars_validation += 1
+        print 'Length is ',len(starwars_characters)
+        print 'Current validation is ',starwars_validation
+        if starwars_validation == len(starwars_characters):
+            print 'Validation succeeded.  Sending outbound text'
+            tropo_post = requests.get('https://api.tropo.com/1.0/sessions?token=51697a667264676c41756c54784d58534e686c786364734b62455a4765744d4d46756458554d43514a515574&msg=The Force is with you! All Star Wars ACI is provisioned!&numberToDial=+61413900700&action=create')
 
     # Print what was sent
     print 'Pushed the following JSON to the APIC'
